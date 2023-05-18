@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 	int opt = 1;
 	int addrlen = sizeof(address);
 	char buffer[1024] = { 0 };
-	char hello[100];
+	char hello[200];
 	printf("\n********SERVER********\n\n");
 	printf("Enter message to the client: ");
 	fgets(hello, 200, stdin);
