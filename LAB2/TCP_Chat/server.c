@@ -26,7 +26,7 @@ void func(int sockfd)
 
         bzero(buff, sizeof(buff));
         read(sockfd, buff, sizeof(buff));
-        printf("From Server:%s",buff);
+        printf("From Server: %s",buff);
 
         if ((strncmp(buff, "exit", 4)) == 0) 
         {
@@ -64,7 +64,7 @@ int main()
     }
     else 
     {
-        printf("connectedto the server..\n");
+        printf("connected to the server..\n");
     }
 
     func(sockfd);// function for chat
