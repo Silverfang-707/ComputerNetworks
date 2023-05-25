@@ -65,6 +65,6 @@ int main() {
             errorDetection();
             break;
         default:
-            printf("\nPlease give a valid input from range(1 - 3)!!\n");
+            printf("\nPlease provide an input within valid range(1 - 3)!!\n");
     }
 }
