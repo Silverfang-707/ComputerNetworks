@@ -12,6 +12,7 @@ int main() {
 	for (i=0;i<7;i++) {
 		printf("%d ",data[i]);
 	}
+
     printf("\n\n--------Error Detection--------");
 	printf("\nenter the received data bits one by one: \n");
 	for (i=0;i<7;i++) {
@@ -23,11 +24,15 @@ int main() {
 	c=c3*4+c2*2+c1 ;
 	if(c==0) {
 		printf("\ncongratulations there is no error! \n");
-	} else {
+	} 
+    else {
 		printf("\nerror on the postion: %d\nthe correct message is: \n",c);
-		if(rec[7-c]==0)
-		 			rec[7-c]=1; else
-		 			rec[7-c]=0;
+		if(rec[7-c]==0){
+            rec[7-c]=1;
+        }	 
+        else{
+            rec[7-c]=0;
+        }
 		for (i=0;i<7;i++) {
 			printf("%d ",rec[i]);
 		}
