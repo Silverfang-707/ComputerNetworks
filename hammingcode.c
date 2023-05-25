@@ -2,6 +2,7 @@
 #include<conio.h>
 int main() {
 	int data[7],rec[7],i,c1,c2,c3,c;
+    printf("--------Encoding--------\n");
 	printf("this works for message of 4bits in size \nenter message bit one by one:  \n");
 	scanf("%d%d%d%d",&data[0],&data[1],&data[2],&data[4]);
 	data[6]=data[0]^data[2]^data[4];
@@ -11,6 +12,7 @@ int main() {
 	for (i=0;i<7;i++) {
 		printf("%d ",data[i]);
 	}
+    printf("\n\n--------Error Detection--------");
 	printf("\nenter the received data bits one by one: \n");
 	for (i=0;i<7;i++) {
 		scanf("%d",&rec[i]);
@@ -20,15 +22,16 @@ int main() {
 	c3=rec[3]^rec[2]^rec[1]^rec[0];
 	c=c3*4+c2*2+c1 ;
 	if(c==0) {
-		printf("\ncongratulations there is no error! ");
+		printf("\ncongratulations there is no error! \n");
 	} else {
-		printf("\nerron on the postion: %d\nthe correct message is: \n",c);
+		printf("\nerror on the postion: %d\nthe correct message is: \n",c);
 		if(rec[7-c]==0)
 		 			rec[7-c]=1; else
 		 			rec[7-c]=0;
 		for (i=0;i<7;i++) {
 			printf("%d ",rec[i]);
 		}
+        printf("\n");
 	}
 	getch();
 }
