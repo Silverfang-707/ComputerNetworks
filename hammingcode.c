@@ -48,7 +48,7 @@ void errorDetection(){
 int main() {
     int sel;
     printf("--------Hamming Code--------\n");
-    printf("\n!! This only works for messages of 4bits in size !!\n\n");
+    printf("\n!! This program only works for messages of 4bits in size !!\n\n");
     printf("Encoding: 1\nError Detection: 2\nBoth: 3\n\n");
     printf("Enter the serial number of the operation required: ");
     scanf("%d",&sel);
