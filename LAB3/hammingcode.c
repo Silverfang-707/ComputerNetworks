@@ -28,7 +28,7 @@ void errorDetection(){
 	c3=rec[3]^rec[2]^rec[1]^rec[0];
 	c=c3*4+c2*2+c1;
 	if(c==0) {
-		printf("\nCongratulations there is no error! \n");
+		printf("\nThere is no error! \n");
 	} 
     else {
 		printf("\nError on the postion: %d\nCorrect message is: ",c);
