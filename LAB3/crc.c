@@ -7,14 +7,16 @@ char gen_poly[10];
 int data_length,i,j;
 
 void XOR(){
-    for(j = 1;j < N; j++)
-    check_value[j] = (( check_value[j] == gen_poly[j])?'0':'1');
-    
+    for(j = 1;j < N; j++){
+        check_value[j] = (( check_value[j] == gen_poly[j])?'0':'1');
+    }
 }
 
 void crc(){
-    for(i=0;i<N;i++)
-        check_value[i]=data[i];
+    for(i=0;i<N;i++){
+        check_value[i]=data[i];       
+    }
+
     do{
         if(check_value[0]=='1')
             XOR();
@@ -30,11 +32,12 @@ void receiver(){
     scanf("%s", data);
     printf("\n Data received: %s", data);
     crc();
-    for(i=0;(i<N-1) && (check_value[i]!='1');i++);
+    for(i=0;(i<N-1) && (check_value[i]!='1');i++){
         if(i<N-1)
             printf("\n Error detected!!\n\n");
         else
             printf("\n No error detected!\n\n");
+    }   
 }
 
 void sender(){
@@ -44,13 +47,15 @@ void sender(){
     printf("Enter the Generating polynomial: ");
     scanf("%s",gen_poly);
     data_length=strlen(data);
-    for(i=data_length;i<data_length+N-1;i++)
+    for(i=data_length;i<data_length+N-1;i++){
         data[i]='0';
+    }
     printf("\n Data padded with n-1 zeros : %s",data);
     crc();
     printf("\n CRC or Check value is : %s",check_value);  
-    for(i=data_length;i<data_length+N-1;i++)
+    for(i=data_length;i<data_length+N-1;i++){
         data[i]=check_value[i-data_length];
+    }
     printf("\n Final data to be sent : %s\n",data);
 }
 
@@ -77,5 +82,5 @@ int main()
         default:
             printf("Please enter a valid operation!!");
     }
-        return 0;
+    return 0;
 }
