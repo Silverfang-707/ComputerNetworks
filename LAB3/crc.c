@@ -32,12 +32,11 @@ void receiver(){
     scanf("%s", data);
     printf("\n Data received: %s", data);
     crc();
-    for(i=0;(i<N-1) && (check_value[i]!='1');i++){
+    for(i=0;(i<N-1) && (check_value[i]!='1');i++);
         if(i<N-1)
             printf("\n Error detected!!\n\n");
         else
-            printf("\n No error detected!\n\n");
-    }   
+            printf("\n No error detected!\n\n");  
 }
 
 void sender(){
