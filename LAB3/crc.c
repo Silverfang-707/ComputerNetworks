@@ -34,7 +34,7 @@ void receiver(){
     crc();
     for(i=0;(i<N-1) && (check_value[i]!='1');i++);
         if(i<N-1)
-            printf("\n Error detected!!\n\n");
+            printf("\n Error detected !!\n\n");
         else
             printf("\n No error detected\n\n");  
 }
