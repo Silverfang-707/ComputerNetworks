@@ -36,7 +36,7 @@ void receiver(){
         if(i<N-1)
             printf("\n Error detected!!\n\n");
         else
-            printf("\n No error detected!\n\n");  
+            printf("\n No error detected\n\n");  
 }
 
 void sender(){
