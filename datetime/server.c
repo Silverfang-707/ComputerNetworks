@@ -24,7 +24,7 @@ int main(){
     listen(clintListn , 20);
 
     while(1){
-        printf("\n\nHi,Iam running server.Some Client hit me\n"); // whenever a request from client came. It will be processed here.​
+        printf("\n\nServer running...\n"); // whenever a request from client came. It will be processed here.​
         clintConnt = accept(clintListn, (struct sockaddr*)NULL, NULL);
         clock = time(NULL);
         snprintf(dataSending, sizeof(dataSending), "%.24s\r\n", ctime(&clock)); // Printing successful message​
