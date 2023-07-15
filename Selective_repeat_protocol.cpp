@@ -27,7 +27,7 @@ int main()
             tmp4 = noofPacket;
             
         for(i = noofPacket - morePacket; i <= tmp4; i++)
-       cout<<"\nSending Frame "<<i;
+            cout<<"\nSending Frame "<<i;
             
         tmp2 = receiver(tmp1);
         tmp3 += tmp2;
