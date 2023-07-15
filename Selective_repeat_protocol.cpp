@@ -1,19 +1,22 @@
 #include<iostream>
-int tmp1, tmp2, tmp3, tmp4, tmp5, i, windowsize = 4, noofpacket, morepacket;
-using namespace std;
 
-int main(){
-    char cc;
+ int tmp1, tmp2, tmp3, tmp4, tmp5, i, windowsize = 4, noofPacket, morePacket;
+ 
+using namespace std;
+int main()
+{
+   
+    char c;
     int receiver(int);
     int simulate(int);
     int negack(int);
-
-    for(int i = 0; i<10; i++){
+    
+    for(int i = 0;i < 10;i++)
         rand();
-        noofpacket = rand()%10;
-    }
-    cout<<"Number of frames is: "<<noofpacket<<endl;
-    morepacket = noofpacket;
+        noofPacket = rand()%10;
+    cout<<"Number of frames is: "<<noofPacket;
+    morePacket = noofPacket;
+    
     while(morePacket >= 0)
     {
         tmp1 = simulate(windowsize);
